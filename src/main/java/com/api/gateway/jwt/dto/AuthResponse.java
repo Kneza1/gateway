@@ -1,6 +1,5 @@
 package com.api.gateway.jwt.dto;
 
-import jakarta.annotation.sql.DataSourceDefinition;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

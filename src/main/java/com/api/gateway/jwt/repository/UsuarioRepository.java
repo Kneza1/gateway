@@ -1,4 +1,4 @@
-package com.api.gateway.repository;
+package com.api.gateway.jwt.repository;
 
 import com.gateway.jwt.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
