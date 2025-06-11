@@ -1,13 +1,13 @@
 package com.api.gateway.jwt.security;
 
-import com.gateway.jwt.repository.UsuarioRepository;
+import com.api.gateway.jwt.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.*;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class UserDetailsServicelmpl implements userDetailsService {
+public class UserDetailsServiceImpl implements UserDetailsService {
 
         private final UsuarioRepository usuarioRepository;
 

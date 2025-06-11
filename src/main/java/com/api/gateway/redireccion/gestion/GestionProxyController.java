@@ -16,7 +16,7 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestTemplate;
 
-import com.gateway.jwt.service.*;
+import com.api.gateway.jwt.service.*;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 
@@ -26,7 +26,7 @@ import lombok.RequiredArgsConstructor;
 public class GestionProxyController {
 
         private final RestTemplate restTemplate;
-    private final JwtService jwtService;
+    private final jwtService jwtService;
 
     @RequestMapping(value = "/**", method = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
     public ResponseEntity<?> proxyProductos(HttpServletRequest request,
@@ -34,7 +34,7 @@ public class GestionProxyController {
                                             @RequestHeader HttpHeaders headers) {
 
         String originalPath = request.getRequestURI().replace("/api/proxy/usuarios", "");
-        String targetUrl = "http://localhost:8082/api/usuarios" + originalPath;
+        String targetUrl = "http://localhost:8020/api/usuarios" + originalPath;
         HttpMethod method = HttpMethod.valueOf(request.getMethod());
 
         // Validar DELETE solo si no es admin

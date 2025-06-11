@@ -1,11 +1,9 @@
 package com.api.gateway.jwt.service;
 
-import com.api.gateway.jwt.dto.AuthResponse;
-import com.api.gateway.jwt.dto.LoginRequest;
-import com.gateway.jwt.dto.*;
-import com.gateway.jwt.model.Usuario;
-import com.gateway.jwt.repository.UsuarioRepository;
-import com.gateway.jwt.security.JwtUtil;
+import com.api.gateway.jwt.dto.*;
+import com.api.gateway.jwt.model.Usuario;
+import com.api.gateway.jwt.repository.UsuarioRepository;
+import com.api.gateway.jwt.security.JwtUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.*;
 import org.springframework.stereotype.Service;
@@ -13,7 +11,8 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class AuthService {
-        private final UsuarioRepository usuarioRepository;
+
+    private final UsuarioRepository usuarioRepository;
     private final AuthenticationManager authManager;
     private final JwtUtil jwtUtil;
 
